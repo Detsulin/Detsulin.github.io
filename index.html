@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"
+	<title>Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--ໂຕເສີມໃນການໂຊຂໍ້ມູນຢູ່ເສັ້ງສະແດງຕ່າງໆ-->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@1"></script> <!--ສີ້ນສຸດການເພີ່ມໂຕເສີມໃນການໂຊຂໍ້ມູນຢູ່ເສັ້ງສະແດງຕ່າງໆ-->
+
+<!--ເພື່ມ css ເພື່ອເຮັດຍບ໋ອກ-->
+<style type="text/css">
+	.header{
+		height: 30px;
+		background-color: #515A5A;
+		color:#FDFEFE;
+		text-indent: 15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+	}
+	.push{
+		margin-top: 30px;
+	}
+	.inside{
+		border: 1px solid #17202A;
+		padding: 8px;
+		border-bottom-left-radius: 10px;/*ຂອບໂຄ້ງ*/
+		border-bottom-right-radius: 10px;/*ຂອບໂຄ້ງ*/
+		background-color: #FDFEFE;/*ເທສີໃສ່ສະເພາະ chart*/
+
+	} 
+
+	body{
+		/*background-image: url(img/logo.png);*/
+		/*background-size: cover;*/
+		/*background-repeat: no-repeat;*/
+		background-color: #D5D8DC;/*ປ່ຽນສີໜ້າຈໍ*/
+	}
+
+	}
+
+</style>
+</head>
+<body>
+		<!--add bootsrapໃຫ້ມັນຈໍນ້ອຍ-->
+	<div class="push"></div> <!--ນີ້ແມ່ນບໍ່ເຮັດໃຫ້ມັນຈຳໜ້າ page ຫຼາຍ (ທາງເທິງ)-->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="header">Lao GDP growth rate, %</div> <!--ໂຕນີ້ແມ່ນໃສ່ສີຫົວຂໍ້-->
+				<div class="inside"><canvas id="myChart"></canvas></div> <!--ໂຕນີ້ແມ່ນສ້າງກອບຄອບ chart-->
+				
+			</div>
+			<div class="col-md-6">
+				<div class="header">Lao Inflation rate, %</div>
+				<div class="inside"><canvas id="barchart"></canvas></div>
+				
+				
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="header">Lao Inflation rate, %</div>
+				<div class="inside"><canvas id="piechart"></canvas></div>
+				
+			</div>
+			<div class="col-md-6">
+				<div class="header">Lao population</div>
+				<div class="inside"><canvas id="pChart"></canvas></div>
+				
+				
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header">Lao Birth rate 2019 and 2020, %</div>
+				<div class="inside"><canvas id="bChart"></canvas></div>
+				
+				
+			</div>
+			
+		</div>
+	</div>
+	<div class="push"></div> <!--ນີ້ແມ່ນບໍ່ເຮັດໃຫ້ມັນຈຳໜ້າ page ຫຼາຍ (ທາງລຸ່ມ)-->
+	
+</body>
+<!--ສ້າງໃຫ້ມັນເປັນບ໋ອກ-->
+<script src="js/chart.js"></script> <!--ນີ້ເປັນຟາຍທີ່ສ້າງ chart ແລ້ວແລະໄປ save ເປັນນາມສະກຸນ .js ທີ່ folder js ແລະ ດຶງຂໍ້ມູນມາໃຊ້-->
+
+
+
+</html>
